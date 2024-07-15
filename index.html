@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="classlists.css">
+    <title>The cartographer</title>
+    
+</head>
+<body>
+    <div id="endOfGame">
+        <p>End of the game</p><br>
+        <p>Points: </p>
+        <p>A: <span id="EndPointA"></span>, B: <span id="EndPointB"></span>, </p>
+        <p>C: <span id="EndPointC"></span>, D: <span id="EndPointD"></span>.</p>
+        <p>Total score: <span id="endPoints"></span></p>
+        <button id="new_game">Start new game</button>
+    </div>
+    <div class="main-container">
+        <div class="header">
+            <div id="h1">
+                <h1>Potato map</h1>
+            </div>
+            <div id="points-list">
+                <ul>
+                    <li id="spring_point">Spring:<br><span>0</span> point</li>
+                    <li id="summer_point">Summer:<br><span>0</span> point</li>
+                    <li id="autumn_point">Autumn:<br><span>0</span> point</li>
+                    <li id="winter_point">Winter:<br><span>0</span> point</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="game">
+            <div id="gameTable">
+                <div id="table">
+
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div id="points">
+                    <p>Total score: <span id="sumOfPoints"></span></p>
+                </div>
+                
+                <div class="missions">
+                    <div id="mission-A"><span id="A-point"></span><p>A</p></div>
+                    <div id="mission-B"><span id="B-point"></span><p>B</p></div>
+                    <div id="mission-C"><span id="C-point"></span><p>C</p></div>
+                    <div id="mission-D"><span id="D-point"></span><p>D</p></div>
+                </div>
+                <div id="columns">
+                    <div id="left-stats">
+                        <p>Element to be placed</p>
+                        <p>Time unit: <span id="time"></span></p>
+                        <div id="buttons">
+                            <button id="rotate">Rotate</button>
+                            <button id="mirror">Mirror</button>
+                        </div>
+                            
+                        <div id="place">
+                            <div id="placement"></div>
+                        </div>
+                    </div>
+                    <div id="right-stats">
+                        <div id="act_season">
+                            <p>Actual season: <br><span id="season"></span></p>
+                        </div>
+                        <div id="time_remain">
+                            <p>Remaining time from season: <br><span id="timer"></span></p>                   
+                        </div>
+                        <button id="EndButton">End Game</button>
+                        
+                    </div>
+                    
+                   
+                </div>
+                
+                
+                                               
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

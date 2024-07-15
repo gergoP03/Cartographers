@@ -1,0 +1,15 @@
+.green{
+    border-color: rgb(80, 200, 100);
+}
+.red{
+    border-color: red;
+}
+
+.endedGame{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.activeMission{
+    border-color: #00FF7F !important;
+}

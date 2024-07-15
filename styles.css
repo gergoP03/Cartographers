@@ -1,0 +1,247 @@
+body *{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: antiquewhite;
+}
+
+#endOfGame{
+    padding: 10px;
+    display: none;
+    text-align: center;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue;
+    border: 5px solid black;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.main-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 97%;
+    height: 97%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   background-image: url("img/theme.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   isolation: isolate;
+   box-sizing: border-box;
+}
+/*Áttetsző legyen a háttér*/
+.main-container::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: antiquewhite;
+    inset: 0;
+    opacity: .5;
+}
+/* Header desings */
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+}
+#h1 {
+    width: 50%;
+    margin: 0 10px;
+}
+#h1 h1{
+    font-size: 1.5em;
+}
+#points-list {
+    width: 50%;
+    margin: 0 10px;
+}
+#points-list ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#points-list ul li {
+    color: whitesmoke;
+    text-align: center;
+    width: 25%;
+    height: 100%;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+}
+#spring_point {
+    border: 3px solid #097969;
+    background-color: #00FF7F;
+    border-radius: 10px;
+}
+#summer_point {
+    border: 3px solid #d8b863;
+    background-color: #FFF53D;
+    border-radius: 10px;
+}
+#autumn_point {
+    border: 3px solid brown;
+    background-color: #edc9af;
+    border-radius: 10px;
+}
+#winter_point {
+    border: 3px solid #007FFF;
+    background-color: #73C2FB;
+    border-radius: 10px;
+}
+
+/* game display designs */
+.game {
+    max-height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.stats{
+    width: clamp(500px, 50%, 1000px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.missions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+#mission-A, #mission-B, #mission-C, #mission-D{
+    aspect-ratio: 3;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+#mission-A p, #mission-B p, #mission-C p, #mission-D p{
+    font-size: 80%;
+    color: white;
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    z-index: 1;
+    text-decoration: none;
+}
+#A-point, #B-point, #C-point, #D-point {
+    font-size: 80%;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    z-index: 1;
+    text-decoration: none;
+}
+/* Table designs */
+
+/* with divs */
+#gameTable {
+    width: clamp(500px, 50%, 1000px);
+}
+#table {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr); /* 11 oszlop, az 1fr arány megőrzi a négyzeteket */
+    grid-auto-rows: minmax(0, 1fr); /* A sorok 1fr magasságúak */
+    grid-gap: 2px; /* Opcionális: térköz a négyzetek között */
+    width: 80%; /* Opcionális: a grid szélességét a kívánt méretre állíthatod */
+    margin: auto; /* Opcionális: középre igazítás */
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 3px;
+}
+
+.cells{
+    aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+#columns{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#left-stats, #right-stats{
+    width: 50%;
+    margin: 15px;
+}
+
+
+#place{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#placement {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 3px;
+    margin: 5px auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 3px;
+}
+
+.gridElement {
+    aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#buttons{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+button{
+    background-color: #d8b863;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+
+p{
+    font-size: 1.25em;
+    padding: 0;
+    margin: 2px;
+    margin-top: 5px;
+
+    text-decoration: underline;
+}
